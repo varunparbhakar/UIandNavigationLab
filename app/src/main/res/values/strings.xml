@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">UI and Navigation Lab</string>
+
+    <string name="hint_email">Enter your email address</string>
+    <string name="action_signin">Sign In</string>
+    <string name="action_next">Next</string>
+
+    <string name="title_home">Home</string>
+    <string name="title_second_home">2nd Home</string>
+    <string name="title_third_home">3rd Home</string>
+    <string name="title_incrementor">Incrementor</string>
+    <string name="title_blogs">Blogs</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="text_blank">Blank Text</string>
+
+
+</resources>
