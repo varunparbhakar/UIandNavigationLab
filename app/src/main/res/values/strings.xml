@@ -4,6 +4,8 @@
     <string name="hint_email">Enter your email address</string>
     <string name="action_signin">Sign In</string>
     <string name="action_next">Next</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_link">Full Post</string>
 
     <string name="title_home">Home</string>
     <string name="title_second_home">2nd Home</string>
