@@ -10,6 +10,10 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.auth0.jwt.exceptions.JWTCreationException;
+
 import edu.uw.tcss450.uiandnavigationlab.R;
 import edu.uw.tcss450.uiandnavigationlab.databinding.FragmentSignInBinding;
 
@@ -40,6 +44,7 @@ public class SignInFragment extends Fragment {
 
         //On button click, navigate to MainActivity
         binding.buttonSignin.setOnClickListener(button -> {
+
                 Navigation.findNavController(getView()).navigate(
                         SignInFragmentDirections
                             .actionSignInFragmentToMainActivity(
@@ -48,7 +53,26 @@ public class SignInFragment extends Fragment {
         });
     }
 
+    /**
+     * This helper method is creating a JSON Web Token (JWT). In future labs, the JWT will
+     * be created and sent to us from the Web Service. For now, we will "fake" that and create
+     * the JWT client-side. This is ANTI-PATTERN!!! Do not create JWTs client-side.
+     *
+     * @param email the email used to encode into the JWT
+     * @return the resulting JWT
+     */
     private String generateJwt(final String email) {
-        return "";
+        String token;
+        try {
+            Algorithm algorithm = Algorithm.HMAC256("secret key don't use a string literal in " +
+                    "production code!!!");
+            token = JWT.create()
+                    .withIssuer("auth0")
+                    .withClaim("email", email)
+                    .sign(algorithm);
+        } catch (JWTCreationException exception){
+            throw new RuntimeException("JWT Failed to Create.");
+        }
+        return token;
     }
 }
