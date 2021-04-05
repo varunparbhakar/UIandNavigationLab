@@ -47,4 +47,8 @@ public class SignInFragment extends Fragment {
                             ));
         });
     }
+
+    private String generateJwt(final String email) {
+        return "";
+    }
 }
