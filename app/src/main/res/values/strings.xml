@@ -13,9 +13,9 @@
     <string name="title_incrementer">Incrementer</string>
     <string name="title_blogs">Blogs</string>
 
-    <string name="label_home">Welcome Home!</string>
-    <string name="label_second_home">Welcome to your second home!</string>
-    <string name="label_third_home">Welcome to your third home!</string>
+    <string name="label_home">Welcome Home %1$s!</string>
+    <string name="label_second_home">Welcome to your second home %1$s!</string>
+    <string name="label_third_home">Welcome to your third home %1$s!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="text_blank">Blank Text</string>
