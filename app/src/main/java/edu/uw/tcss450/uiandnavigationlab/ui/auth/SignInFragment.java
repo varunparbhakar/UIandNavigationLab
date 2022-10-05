@@ -43,11 +43,13 @@ public class SignInFragment extends Fragment {
         FragmentSignInBinding binding = FragmentSignInBinding.bind(requireView());
 
         //On button click, navigate to MainActivity
-        binding.buttonSignin.setOnClickListener(button -> Navigation.findNavController(requireView()).navigate(
-                SignInFragmentDirections
-                    .actionSignInFragmentToMainActivity(
+        binding.buttonSignin.setOnClickListener(button -> {
+            Navigation.findNavController(requireView()).navigate(
+                    SignInFragmentDirections
+                            .actionSignInFragmentToMainActivity(
 
-                    )));
+                            ));
+        });
     }
 
     /**
