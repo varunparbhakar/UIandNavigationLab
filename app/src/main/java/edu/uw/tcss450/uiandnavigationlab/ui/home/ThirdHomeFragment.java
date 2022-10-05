@@ -36,8 +36,6 @@ public class ThirdHomeFragment extends Fragment {
 
         //Local access to the ViewBinding object. No need to create as Instance Var as it is only
         //used here.
-        FragmentThirdHomeBinding binding = FragmentThirdHomeBinding.bind(getView());
-
-        binding.textEmail.setText("Welcome to your third home!");
+        FragmentThirdHomeBinding binding = FragmentThirdHomeBinding.bind(requireView());
     }
 }

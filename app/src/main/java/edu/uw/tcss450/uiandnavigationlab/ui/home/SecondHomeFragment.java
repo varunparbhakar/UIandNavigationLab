@@ -38,12 +38,11 @@ public class SecondHomeFragment extends Fragment {
 
         //Local access to the ViewBinding object. No need to create as Instance Var as it is only
         //used here.
-        FragmentSecondHomeBinding binding = FragmentSecondHomeBinding.bind(getView());
-        binding.textEmail.setText("Welcome to your second home!");
+        FragmentSecondHomeBinding binding = FragmentSecondHomeBinding.bind(requireView());
 
         //On button click, navigate to Third Home
         binding.buttonNext.setOnClickListener(button ->
-                Navigation.findNavController(getView()).navigate(
+                Navigation.findNavController(requireView()).navigate(
                         SecondHomeFragmentDirections
                                 .actionSecondHomeFragmentToThirdHomeFragment())
         );

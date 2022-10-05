@@ -40,17 +40,14 @@ public class SignInFragment extends Fragment {
 
         //Local access to the ViewBinding object. No need to create as Instance Var as it is only
         //used here.
-        FragmentSignInBinding binding = FragmentSignInBinding.bind(getView());
+        FragmentSignInBinding binding = FragmentSignInBinding.bind(requireView());
 
         //On button click, navigate to MainActivity
-        binding.buttonSignin.setOnClickListener(button -> {
+        binding.buttonSignin.setOnClickListener(button -> Navigation.findNavController(requireView()).navigate(
+                SignInFragmentDirections
+                    .actionSignInFragmentToMainActivity(
 
-                Navigation.findNavController(getView()).navigate(
-                        SignInFragmentDirections
-                            .actionSignInFragmentToMainActivity(
-
-                            ));
-        });
+                    )));
     }
 
     /**
