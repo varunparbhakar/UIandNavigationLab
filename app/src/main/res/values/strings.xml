@@ -10,7 +10,7 @@
     <string name="title_home">Home</string>
     <string name="title_second_home">2nd Home</string>
     <string name="title_third_home">3rd Home</string>
-    <string name="title_incrementer">Incrementer</string>
+    <string name="title_incrementor">Incrementer</string>
     <string name="title_blogs">Blogs</string>
 
     <string name="label_home">Welcome Home %1$s!</string>
